@@ -50,8 +50,8 @@
   * k1：先頭の番号，k2：終わりの番号 （整数型の配列．大きさkai）
   * wtype="ct"： ウィンドウのタイプ．初期設定は，cosine taper
 
-### FourPwrAutoCo(Ck, L, nch, hz)
-* (Xf, Pf, Cxx, Rxx) = FourPwrAutoCo(Ck, L, nch, hz)
+### FourPwrAutoCo(Ck, L, nch, kai, hz)
+* (Xf, Pf, Cxx, Rxx) = FourPwrAutoCo(Ck, L, nch, kai, hz)
   * Xf: フーリエ変換，Pf：パワースペクトル，Cxx：自己相関関数，Rxx．
   * Xf のみ複素数．他は実数．
   * 配列の大きさは，(L, nch, kai)

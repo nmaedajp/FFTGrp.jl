@@ -27,7 +27,7 @@ function FFTkukan(x, L, nch, kai, k1, k2; wtype="ct")
     return Ck
 end
 
-function FourPwrAutoCo(Ck, L, nch, hz)
+function FourPwrAutoCo(Ck, L, nch, kai, hz)
     Xf = Ck / hz
     Pf = real.((conj.(Ck) .* Ck)/L/hz) 
     Cxx = Array{Float64}(undef, L, nch, kai)
