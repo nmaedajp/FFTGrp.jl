@@ -1,5 +1,10 @@
 module FFTGrp
+
+  using FFTW
+    
   export ex_trend, dw, dws, w2, swin, swin_sq
+  export kukan, FFTkukan, FourPwrAutoCo, CrsSpecCo, f_tau, orikaesi
+
   function ex_trend(y)
   # removing linea trend
   # x: data of horizontal axis, y: data of vertical axis
@@ -143,4 +148,7 @@ module FFTGrp
     end
     return n
   end
+
+  include("FFTgrp22.jl")
+  
 end
