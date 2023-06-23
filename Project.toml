@@ -1,7 +1,7 @@
 name = "FFTGrp"
 uuid = "bf06c732-83f0-403e-9c22-2c4c46823249"
-authors = ["Naoki Maeda2 <fnkyksj@gmail.com> and contributors"]
-version = "1.1.1-DEV"
+authors = ["Naoki Maeda <fnkyksj@gmail.com> and contributors"]
+version = "1.1.2-DEV"
 
 [deps]
 FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"

@@ -149,6 +149,6 @@ module FFTGrp
     return n
   end
 
-  include("FFTgrp22.jl")
+  include("FFTGrp22.jl")
   
 end
