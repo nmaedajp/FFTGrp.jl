@@ -50,9 +50,15 @@
   * k1：先頭の番号，k2：終わりの番号 （整数型の配列．大きさkai）
   * wtype="ct"： ウィンドウのタイプ．初期設定は，cosine taper
 
+### FourPwr(Ck, L, hz)
+* (Xf, Pf) = FourPwr(Ck, L, hz)
+  * Xf: フーリエ変換，Pf：パワースペクトル．
+  * Xf のみ複素数．他は実数．
+  * 配列の大きさは，(L, nch, kai) -> nch, kai は関数の中で不使用．
+
 ### FourPwrAutoCo(Ck, L, nch, kai, hz)
 * (Xf, Pf, Cxx, Rxx) = FourPwrAutoCo(Ck, L, nch, kai, hz)
-  * Xf: フーリエ変換，Pf：パワースペクトル，Cxx：自己相関関数，Rxx．
+  * Xf: フーリエ変換，Pf：パワースペクトル，Cxx：自己相関関数，Rxx：自己相関係数
   * Xf のみ複素数．他は実数．
   * 配列の大きさは，(L, nch, kai)
   
@@ -60,6 +66,10 @@
 * (Pfxy, Cxy, Rxy) = CrsSpecCo(Ck, Cxx, L, nch, kai, hz; ich0=1)
   * Pfxy：クロススペクトル，Cxy：相互相関関数，Rxy：相互相関係数
   * ich0=1：初期設定では，チャンネル１との相互相関関数，相互相関係数を計算する．
+
+### freq(L, hz)
+* f = freq(L, hz)
+* 振動数
 
 ### f_tau(L, hz)
 * (f, tau, tau2) = f_tau(L, hz)

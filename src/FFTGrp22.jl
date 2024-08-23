@@ -27,6 +27,12 @@ function FFTkukan(x, L, nch, kai, k1, k2; wtype="ct")
     return Ck
 end
 
+function FourPwr(Ck, L, hz)
+    Xf = Ck / hz
+    Pf = real.((conj.(Ck) .* Ck)/L/hz)
+    return Xf, Pf
+end
+
 function FourPwrAutoCo(Ck, L, nch, kai, hz)
     Xf = Ck / hz
     Pf = real.((conj.(Ck) .* Ck)/L/hz) 
@@ -64,6 +70,12 @@ function CrsSpecCo(Ck, Cxx, L, nch, kai, hz; ich0=1)
         end
     end
 return Pfxy, Cxy, Rxy
+end
+
+function freq(L, hz)
+    df = hz/L
+    f   = [(i-1)*df for i=1:L]
+    return f
 end
 
 function f_tau(L, hz)
