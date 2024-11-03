@@ -3,7 +3,7 @@ module FFTGrp
   using FFTW
     
   export ex_trend, dw, dws, w2, swin, swin_sq
-  export kukan, FFTkukan, FourPwrAutoCo, CrsSpecCo, f_tau, orikaesi
+  export kukan, FFTkukan, FourPwr, FourPwrAutoCo, CrsSpecCo, f_tau, orikaesi
 
   function ex_trend(y)
   # removing linea trend
